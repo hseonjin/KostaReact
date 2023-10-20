@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="mydiv"></div> <!-- div 요소 정의, react 앱이 렌더링될 위 -->
+
+    <script type="text/babel">
+        function Hello() { // 함수형 컴포넌트 정의하여 입력한 텍스트 반환
+            return <h1>Hello React!</h1>
+        }
+        const container = document.getElementById("mydiv"); // mydiv 요소를 js변수에 할당 (렌더링될 대상 요소)
+        const root = ReactDOM.createRoot(container); // React App의 루트 생성
+        root.render(<Hello/>); // Hello 컴포넌트를 렌더링 -> mydiv 요소 내부에 렌더링
+    </script>
+
+</body>
+</html>
