@@ -1,0 +1,28 @@
+// 부모 클래스
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  info() {
+    return `이름: ${this.name}, 나이: ${this.age}`;
+  }
+}
+
+// 자식 클래스
+class Student extends Person {
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+
+  info() {
+    return `이름: ${this.name}, 나이: ${this.age}, 학과: ${this.subject}`;
+  }
+}
+
+let person = new Person("hong", 20);
+console.log(person.info());
+
+let student = new Student("song", 20, "sports");
+console.log(student.info());
