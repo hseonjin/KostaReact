@@ -3,7 +3,7 @@ import {Form, Col, FormGroup, Label, Input, Button} from 'reactstrap'
 import Swal from 'sweetalert2';
 
 const MakeAccount = () => {
-  const style = {width:"600px", margin:"20px auto", padding:"30px", border:"1px solid #ddd0d0", borderRadius:"10px"}
+  const style = {width:"600px", margin:"100px auto", padding:"30px", border:"1px solid #ddd0d0", borderRadius:"10px"}
 
   const [type, setType] = useState("normal"); // 현재 선택한 type 저장 (기본 선택값 normal)
   const [grade, setGrade] = useState(false); // grade 비활성화 (grade가 true인 경우 활성화)
